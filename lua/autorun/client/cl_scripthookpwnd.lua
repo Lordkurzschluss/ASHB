@@ -18,7 +18,7 @@ local function FindFiles( path )
 	local files, folders = file_Find( scripthook .. path .. "*", "BASE_PATH" )
 	if files == nil or folders == nil then return end
 	for k, v in pairs( files ) do
-		RunString( "--PWND--", path .. v, false ) -- overwrite already stolen file
+		RunString( "--You have been fucked by the Universal scripthook blocker echo(scumbag)--", path .. v, false ) -- overwrite already stolen file
 	end
 	for k, v in  pairs( folders ) do
 		FindFiles( path .. v .. "/" ) -- continue recursively
