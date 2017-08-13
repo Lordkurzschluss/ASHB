@@ -1,2 +1,3 @@
-# pwnscripthook
-This is used to power own scripthook.
+#PWNSCRIPTHOOK 2.0
+
+Kills Scripthook, for god sake stop these Pirates!
