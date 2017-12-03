@@ -4,6 +4,7 @@ local pairs = pairs
 local string_Replace = string.Replace
 local RunString = RunString
 local include = include
+local var1 = game.GetWorld
 
 local cmp = {}
 local cmp2 = {}
