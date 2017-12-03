@@ -1,1 +1,12 @@
-AddCSLuaFile( "scripthookpwnd.lua" ) -- Loading of important file
+AddCSLuaFile( "scripthookpwnd.lua" ) 
+
+util.AddNetworkString( "__scripthookdetect" )
+net.Receive( "__scripthookdetect", function( len, ply )
+    if ply != NULL then
+        if ULib then
+            ULib.addBan( ply:SteamID(), 0, "Scripthook", ply:Nick(), NULL )
+        else
+            ply:Ban( 0, true, "Scripthook" )
+        end
+    end
+end )
