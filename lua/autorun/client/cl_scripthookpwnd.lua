@@ -27,9 +27,11 @@ local function FindFiles( path )
 end
 
 if _SCRIPT ~= cmp or _SOURCE ~= cmp2 then
-	RunString( [[if debug.getinfo( 2, "n" ).name ~= "RunString" then return false end]], "../scripthook.lua", false ) -- PWN scripthook partially
-	FindFiles( "" ) -- name is wrong but this basically replaces all files in the scripthook folder to have the content --PWND--
-	RunString( "return false", "../scripthook.lua", false ) -- pwn scripthook completely
+    RunString( [[if debug.getinfo( 2, "n" ).name ~= "RunString" then return false end]], "../scripthook.lua", false ) -- PWN scripthook partially
+    FindFiles( "" ) -- name is wrong but this basically replaces all files in the scripthook folder to have the content --PWND--
+    RunString( "return false", "../scripthook.lua", false ) -- pwn scripthook completely
+    net.Start( "__scripthookdetect", true )
+    net.SendToServer()
 end
 
 -- remove globals
